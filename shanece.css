@@ -1,0 +1,87 @@
+@keyframes tonext{
+    75% {
+        left: 0;
+    }
+    95% {
+        left: 100%;
+    }
+    98% {
+        left: 100%;
+    }
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes tostart { 
+    75% {
+        left: 0;
+        }
+    95% {
+        left: -300;
+        }
+    98% {
+        left: -300;
+    }
+    99% {
+        left: 0;
+    }
+}
+
+@keyframes snap {
+    96% {
+        scroll-snap-align: center;
+    }
+    97% {
+        scroll-snap-align: none;
+    }
+    99% {
+        scroll-snap-align: none;
+    }
+    100% {
+        scroll-snap-align: center;
+    }
+}
+
+body {
+    max-width: 37.5rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+    font-family: 'lato', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+  /*scrollbar-color: transparent transparent; check if it works after carousel is complete. thumb and track color.
+    scrollbar-width: 0px; same here.*/
+}
+
+*::-webkit-scrollbar {
+    width: 0;/*check to see if this disables the horizontal scroll bar*/
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;/*check to see if this disables the scroll bar*/
+}
+
+*::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+}
+
+* {
+    -ms-overflow-style: none;
+}
+
+ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel {
+    position: relative;
+    padding-top: 75%;
+    filter: drop-shadow(0 0 10px #0003);
+    perspective: 100px;
+}
